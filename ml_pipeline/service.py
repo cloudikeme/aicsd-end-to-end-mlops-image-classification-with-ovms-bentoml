@@ -12,8 +12,6 @@ from bentoml.io import NumpyNdarray
 from bentoml.io import Text
 import subprocess
 import json
-import image_classification
-import helper
 import logging
 
 svc = bentoml.Service("image_classification", runners=[])
