@@ -1,0 +1,18 @@
+{
+    "Status" : "PipelineComplete", // or "PipelineFailed"
+    "QCFlags" : "Quality Control string, can be empty", 
+    "OutputFiles" : "[
+        {
+            "DirName": "/path/to/file",
+            "Name": "file_name.extension",
+            "Extension": "file extension without the .",
+            "Status": "current status - can be empty",
+            "ErrorDetails": "detailed error message- can be empty",
+            "Owner": "current owner - can be empty"
+        },
+        {
+            // repeat as necessary
+        }
+    ], 
+    "Results" : "any results string to be displayed in the AiCSD UI"
+    }

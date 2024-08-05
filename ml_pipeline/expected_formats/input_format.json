@@ -1,0 +1,39 @@
+{
+    "InputFileLocation":"/path/to/input file",
+    "OutputFileFolder":"/path/to/output files",
+    "ModelParams":{"model parameters specific to the pipeline"},
+    "JobUpdateUrl":"REST API endpoint for updating job",
+    "PipelineStatusUrl":"REST API endpoint for updating pipeline status", 
+    "GatewayIP":"gateway IP address"
+}
+
+
+{
+    "InputFileLocation":"/tmp/files/input",
+    "OutputFileFolder":"/tmp/files/output",
+    "ModelParams":{"model parameters specific to the pipeline"},
+    "JobUpdateUrl":"REST API endpoint for updating job",
+    "PipelineStatusUrl":"REST API endpoint for updating pipeline status", 
+    "GatewayIP":"gateway IP address"
+}
+
+response 
+
+{
+    "Status" : "PipelineComplete", // or "PipelineFailed"
+    "QCFlags" : "Quality Control string, can be empty", 
+    "OutputFiles" : "[
+        {
+            "DirName": "/path/to/file",
+            "Name": "file_name.extension",
+            "Extension": "file extension without the .",
+            "Status": "current status - can be empty",
+            "ErrorDetails": "detailed error message- can be empty",
+            "Owner": "current owner - can be empty"
+        },
+        {
+            // repeat as necessary
+        }
+    ], 
+    "Results" : "any results string to be displayed in the AiCSD UI"
+    }

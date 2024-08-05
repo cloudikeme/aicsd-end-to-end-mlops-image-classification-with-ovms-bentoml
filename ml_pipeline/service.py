@@ -21,15 +21,6 @@ svc = bentoml.Service("image_classification", runners=[])
 @svc.api(input=Text(), output=Text())
 def classify(text: str) -> str:
 
-    {
-        "InputFileLocation":"/tmp/files/input",
-        "OutputFileFolder":"/tmp/files/output",
-        "ModelParams":{"model parameters specific to the pipeline"},
-        "JobUpdateUrl":"REST API endpoint for updating job",
-        "PipelineStatusUrl":"REST API endpoint for updating pipeline status", 
-        "GatewayIP":"gateway IP address"
-    }
-
     try:
      data = json.loads(text)
      print("Decoded json message received by the bentoml service: ",data)
