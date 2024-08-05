@@ -9,17 +9,7 @@ touch pythonClientConfig.yaml
 
 touch service.py
 
-add this json fucnction to the service.py file, within the @svc.api , specifying the input/output file paths and the response
-
-{
-        "InputFileLocation":"/tmp/files/input",
-        "OutputFileFolder":"/tmp/files/output",
-        "ModelParams":{"model parameters specific to the pipeline"},
-        "JobUpdateUrl":"REST API endpoint for updating job",
-        "PipelineStatusUrl":"REST API endpoint for updating pipeline status", 
-        "GatewayIP":"gateway IP address"
-    }
-
+### 
 
 
 
